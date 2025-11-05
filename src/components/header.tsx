@@ -14,7 +14,6 @@ export const AcmeLogo = () => {
     </svg>
   );
 };
-
 export default function Header() {
 
   const navItems =[
@@ -23,8 +22,6 @@ export default function Header() {
     { label: "Pricing", href: "/" },
     { label: "About", href: "/" },
   ]
-
-  
 
   return (
     <Navbar shouldHideOnScroll>
