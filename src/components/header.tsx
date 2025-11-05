@@ -2,31 +2,51 @@
 "use client";
 import {Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button} from "@heroui/react";
 
-export const AcmeLogo = () => {
+export const EftLogo = () => {
   return (
-    <svg fill="none" height="36" viewBox="0 0 32 32" width="36">
+    <svg
+      width="36"
+      height="36"
+      viewBox="0 0 36 36"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      {/* Внешний прицел */}
+      <circle
+        cx="18"
+        cy="18"
+        r="12"
+        stroke="currentColor"
+        strokeWidth="2"
+      />
+      {/* Горизонтальная и вертикальная линии прицела */}
+      <line x1="18" y1="6" x2="18" y2="2" stroke="currentColor" strokeWidth="2" />
+      <line x1="18" y1="34" x2="18" y2="30" stroke="currentColor" strokeWidth="2" />
+      <line x1="6" y1="18" x2="2" y2="18" stroke="currentColor" strokeWidth="2" />
+      <line x1="34" y1="18" x2="30" y2="18" stroke="currentColor" strokeWidth="2" />
+
+      {/* Силуэт бойца (шлем и корпус) */}
       <path
-        clipRule="evenodd"
-        d="M17.6482 10.1305L15.8785 7.02583L7.02979 22.5499H10.5278L17.6482 10.1305ZM19.8798 14.0457L18.11 17.1983L19.394 19.4511H16.8453L15.1056 22.5499H24.7272L19.8798 14.0457Z"
+        d="M14 18a4 4 0 018 0v1h-8v-1zm1 3h6c1.1 0 2 .9 2 2v3H13v-3c0-1.1.9-2 2-2z"
         fill="currentColor"
-        fillRule="evenodd"
       />
     </svg>
   );
 };
+
 export default function Header() {
 
   const navItems =[
-    { label: "Home", href: "/" },
-    { label: "Features", href: "/" },
-    { label: "Pricing", href: "/" },
-    { label: "About", href: "/" },
+    { label: "Главная", href: "/" },
+    { label: "Наш продукт", href: "/" },
+    { label: "О нас", href: "/" },
+    
   ]
 
   return (
     <Navbar shouldHideOnScroll>
       <NavbarBrand>
-        <AcmeLogo />
+        <EftLogo />
         <p className="font-bold text-inherit">EFT</p>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
@@ -38,11 +58,11 @@ export default function Header() {
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+          <Link href="#">Войти</Link>
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+            Зарегистрироваться
           </Button>
         </NavbarItem>
       </NavbarContent>
