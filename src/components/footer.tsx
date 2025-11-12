@@ -1,6 +1,6 @@
 "use client";
 import { Link } from "@heroui/react";
-import { Github, Instagram, Twitter, Youtube } from "lucide-react";
+import { Github, Twitter, Instagram, Youtube } from "lucide-react";
 
 export default function Footer() {
   const footerLinks = [
