@@ -141,7 +141,7 @@ const [submittedData, setSubmittedData] = React.useState<{
                 <Form
                   className="w-full flex flex-col gap-5 p-4 bg-zinc-900/40 border border-zinc-700 rounded-xl shadow-lg"
                   onReset={() => setAction("reset")}
-               onSubmit={(e) => {
+              onSubmit={(e) => {
   e.preventDefault();
   const formData = new FormData(e.currentTarget);
 
@@ -150,8 +150,13 @@ const [submittedData, setSubmittedData] = React.useState<{
   const username = formData.get("username") as string;
   const password = formData.get("password") as string;
 
+  // 🔥 Сохраняем данные в состояние
   setSubmittedData({ username, password });
   setAction("submit");
+
+
+  console.log("Логин:", username);
+  console.log("Пароль:", password);
 }}
 
 
