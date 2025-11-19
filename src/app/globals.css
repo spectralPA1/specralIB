@@ -36,3 +36,27 @@ body {
      color: hsl(0, 0%, 0%); 
      background-color: #fe9a00;
 }
+
+.menu__link_main {
+  background: url('/images/menu-main-button_gold-normal.png') no-repeat;
+  background-size: 100% 100%;
+  width: 180px;      
+  height: 42px;      
+  
+  display: сompatible;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-size: 16px;   
+  text-shadow: 0 0 5px #141721;
+  border-radius: 6px;
+  padding: 0;       
+}
+
+.text-gold-300 {
+  color: #d4af37;
+}
+.border-gold-300 {
+  border-color: #d4af37;
+}
